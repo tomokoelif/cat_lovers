@@ -86,7 +86,7 @@ import os
 import dj_database_url
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL", "sqlite:///db.sqlite3"))
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL", "postgresql://neondb_owner:EBXYydsU87mQ@ep-withered-block-a2hkfsdw.eu-central-1.aws.neon.tech/vest_frame_prize_495034"))
 }
 
 # Password validation
