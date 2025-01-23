@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '8000-nielmc-django-project-0kylrta3cs.us2.codeanyapp.com','127.0.0.1','localhost',
+    'cat-lovers-a986f59e9649.herokuapp.com','127.0.0.1','localhost',
 ]
 
 # Application definition

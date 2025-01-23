@@ -1,1 +1,1 @@
-web: gunicorn cat_lovers.wsgi
+web: gunicorn codestar.wsgi
