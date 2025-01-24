@@ -51,23 +51,33 @@
                     </li>
                 </ul>
                 <span class="navbar-text text-muted">
-                    We are Cat Lovers
+                    We are Cat Lovers!
                 </span>
             </div>
         </div>
     </nav>
-
-    <main class="flex-shrink-0 main-bg">
-
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock content %}
-
-    </main>
+    　　<!-- displaying Django messages -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+<main class="flex-shrink-0 main-bg">
+    {% block content %}
+    <!-- Content Goes here -->
+    {% endblock content %}
+</main>
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white"> {% block copyright %}Copyright 2023 Cat Lovers{% endblock copyright %}</p>
+        <p class="m-0 text-</footer>center text-white"> {% block copyright %}Copyright 2023 Cat Lovers{% endblock copyright %}</p>
         <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
             <i class="fab fa-instagram-square ms-3"></i>
