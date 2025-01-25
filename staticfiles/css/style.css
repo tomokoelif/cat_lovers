@@ -1,24 +1,16 @@
 body {
-    background-color: #F9FAFC;
+    background-color: #ffffff;
 }
 
 .brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
-}
-
-.red-o {
-    color: #E84610;
-}
-
-.thin {
-    font-weight: 300;
+    font-family: cursive; /* フォントを cursive に変更 */
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: #00870e;
 }
 
 .light-bg {
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 .dark-bg {
@@ -26,7 +18,7 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #ffffff;
 }
 
 .card {
@@ -113,24 +105,24 @@ body {
 
 .btn-signup,
 .btn-edit {
-    background-color: #188181;
-    color: #fff;
+    background-color: #ffffff;
+    color: #2A74DB;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
+    background-color: #ffffff;
+    color: #2A74DB;
 }
 
 .link {
-    color: #23BBBB;
+    color: #2A74DB;
     text-decoration: none;
 }
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #050c58;
     text-decoration: underline;
 }
 
@@ -159,3 +151,30 @@ body {
 .approval {
     color: rgb(222, 146, 168);
 }
+
+.text-muted {
+    color: #8F6B00 !important;
+}
+
+.navbar-text.text-muted {
+    font-family: cursive; /* フォントを cursive に変更 */
+    font-size: 1.6rem; /* フォントサイズを変更 */
+    font-weight: 700; /* フォントの太さを変更 */
+    color: #8F6B00 !important; /* テキストの色を変更 */
+}
+
+.not-logged-in {
+    color: #000000; /* ここで色を指定します。例として黒色に設定 */
+}
+
+.nav-link {
+    color: #2A74DB !important; /* 通常時の色 */
+    font-weight: normal; /* 通常時のフォントの太さ */
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #0A2A5B !important; /* ホバー時とアクティブ時の色をさらに濃くする */
+    font-weight: bold; /* ホバー時とアクティブ時のフォントの太さを太字にする */
+}
+
