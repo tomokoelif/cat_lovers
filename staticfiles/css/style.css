@@ -43,7 +43,7 @@ body {
 }
 
 .author {
-    color: transparent;
+    color: #ffffff;
     margin: 4px;
 }
 
@@ -90,7 +90,7 @@ body {
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: #8F6B00;
 }
 
 .btn-signup,
