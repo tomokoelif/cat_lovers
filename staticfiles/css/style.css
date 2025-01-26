@@ -43,7 +43,7 @@ body {
 }
 
 .author {
-    color: #ffffff;
+    color: transparent;
     margin: 4px;
 }
 
@@ -75,7 +75,7 @@ body {
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: #000000;
 }
 
 .post-link:hover,
