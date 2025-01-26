@@ -95,14 +95,14 @@ body {
 
 .btn-signup,
 .btn-edit {
-    background-color: #ffffff;
-    color: #2A74DB;
+    background-color: #2A74DB;
+    color: #ffffff
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #ffffff;
-    color: #2A74DB;
+    background-color: #2A74DB;
+    color: #ffffff
 }
 
 .link {
