@@ -35,8 +35,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #188181;
-}
+ }
 
 .scale {
     width: 100%;
@@ -44,43 +43,34 @@ body {
 }
 
 .author {
-    color: white;
+    color: transparent;
     margin: 4px;
-    text-transform: uppercase;
 }
 
 .masthead {
-    margin-top: 10px;
-    overflow: hidden;
+    margin-top: 5%;
     position: relative;
     display: inline-block;
-    height: 33vh;
+    height: 100vh;
     width: 100%;
 }
 
 .masthead-text {
-    background-color: #445261;
-    color: white;
+    color: #000000;
     position: relative;
 }
 
 .masthead-image {
     position: relative;
-    overflow: hidden;
+    width: 100%;
+    height: 100vh;
 }
 
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
+.masthead-image img {
+    width: 100%; /* 画像の幅を100%に設定 */
+    height: auto; /* 画像の高さを100%に設定 */
+    object-fit: cover; /* 画像を枠全体にカバーするように調整 */
+    object-position: center; /* 画像の位置を中央に設定 */
 }
 
 .post-link {
@@ -152,15 +142,11 @@ body {
     color: rgb(222, 146, 168);
 }
 
-.text-muted {
-    color: #8F6B00 !important;
-}
-
-.navbar-text.text-muted {
+.navbar-text-muted {
     font-family: cursive; /* フォントを cursive に変更 */
     font-size: 1.6rem; /* フォントサイズを変更 */
     font-weight: 700; /* フォントの太さを変更 */
-    color: #8F6B00 !important; /* テキストの色を変更 */
+    color: #8F6B00; /* テキストの色を変更 */
 }
 
 .not-logged-in {
