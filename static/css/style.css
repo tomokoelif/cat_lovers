@@ -14,7 +14,7 @@ body {
 }
 
 .light-bg {
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 .dark-bg {
@@ -22,7 +22,7 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #Ffffff;
 }
 
 .card {
@@ -37,9 +37,9 @@ body {
 .image-flash {
     position: absolute;
     bottom: 5%;
-    min-width: 100%;
+    width: 50%;
     left: -2px;
-    background-color: #188181;
+    background-color: transparent;
 }
 
 .scale {
@@ -48,24 +48,27 @@ body {
 }
 
 .author {
-    color: white;
-    margin: 4px;
-    text-transform: uppercase;
+    color: transparent;
+    margin: 2px;
 }
 
 .masthead {
-    margin-top: 10px;
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
+    height: 100vh;
     width: 100%;
 }
 
+.masthead img {
+    width: 100%; /* 画像の幅を100%に設定 */
+    height: 100%; /* 画像の高さを100%に設定 */
+    object-fit: contain; /* 画像を枠内に収める */
+    object-position: center; /* 画像の位置を中央に設定 */
+}
+
 .masthead-text {
-    background-color: #445261;
-    color: white;
-    position: relative;
+    color: #000000;
 }
 
 .masthead-image {
