@@ -167,15 +167,15 @@ body {
     font-family: 'Arial', sans-serif; /* フォントを変更 */
     font-size: 1.0rem; /* フォントサイズを変更 */
     font-weight: bold; /* フォントの太さを変更 */
-    color: #2A74DB; /* テキストの色を変更 */
+    color: #2A74DB !important; /* テキストの色を変更 */
     text-transform: uppercase; /* テキストを大文字に変換 */
 }
 
 .nav-link:hover {
-    color: blue; /* ホバー時の色を変更 */
+    color: blue !important; /* ホバー時の色を変更 */
     text-decoration: underline; /* ホバー時に下線を追加 */
 }
 
 .nav-link.active {
-    color: blue; /* アクティブなリンクの色を変更 */
+    color: blue !important; /* アクティブなリンクの色を変更 */
 }
