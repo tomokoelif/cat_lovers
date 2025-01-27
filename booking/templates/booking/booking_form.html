@@ -2,12 +2,25 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container">
+<div class="container" style="max-width: 800px; margin: auto;">
     <h2>Create Booking</h2>
     <form method="post">
         {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="row">
+            <div class="col-md-6">
+                {{ form.name|as_crispy_field }}
+                {{ form.email|as_crispy_field }}
+                {{ form.date|as_crispy_field }}
+                {{ form.time|as_crispy_field }}
+            </div>
+            <div class="col-md-6">
+                {{ form.cat_name|as_crispy_field }}
+                {{ form.breed|as_crispy_field }}
+                {{ form.color|as_crispy_field }}
+                {{ form.gender|as_crispy_field }}
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
     </form>
 </div>
 {% endblock %}

@@ -88,9 +88,3 @@ class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def test_func(self):
         booking = self.get_object()
         return self.request.user == booking.user
-
-    def delete(self, request, *args, **kwargs):
-        # Display success message
-        messages.success(self.request, "Your booking has been deleted.")
-
-        return super().delete(request, *args, **kwargs)
