@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from datetime import datetime
 from django.utils import timezone
@@ -21,7 +21,7 @@ class BookingsPage(LoginRequiredMixin, ListView):
     """
     model = Booking
     template_name = 'booking/booking_home_page.html'
-    context_object_name = 'booking'
+    context_object_name = 'bookings'
 
 
 class CreateBooking(LoginRequiredMixin, CreateView):
