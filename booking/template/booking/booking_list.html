@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Booking Home Page</h1>
+<ul>
+    {% for booking in booking %}
+    <li>{{ booking.cat_name }} - {{ booking.date }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
