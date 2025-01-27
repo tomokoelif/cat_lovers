@@ -17,7 +17,7 @@
             {% endif %}
         </div>
         <div class="col-12 col-md-8">
-            <h2 style="color: #8f6b00; font-family: cursive; font-size: 1.4rem; font-weight: bold;">
+            <h2 style="color: #664d00; font-family: cursive; font-size: 1.4rem; font-weight: bold;">
                 {{ about.title }}
             </h2>
             {{ about.content | safe }}
@@ -25,7 +25,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-12 col-md-6 my-5">
-            <h2 style="color: #00870e; font-family: cursive; font-size: 1.4rem; font-weight: bold;">
+            <h2 style="color: #00660a; font-family: cursive; font-size: 1.4rem; font-weight: bold;">
                 Let's collaborate!
             </h2>
             <p>I believe in the power of sharing and collaboration, so if you want to donate, adopt a cat, volunteer at a cat cafe or hotel, or just share your ideas, we'd love to hear from you. Fill out the form and we'll get to work right away.</p>
@@ -33,7 +33,7 @@
             <form method="post">
                 {{ collaborate_form | crispy }}
                 {% csrf_token %}
-                <button class="btn btn-secondary" type="submit">Submit</button>
+                <button class="btn btn-secondary" type="submit" style="background-color: #1c55a6; border-color: #1c55a6;">Submit</button>
             </form>
         </div>
     </div>

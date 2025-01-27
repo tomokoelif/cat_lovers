@@ -28,10 +28,10 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    'cat-lovers-a986f59e9649.herokuapp.com','127.0.0.1','localhost',
+    'cat-lovers-a986f59e9649.herokuapp.com', '127.0.0.1', 'localhost', '8000-tomokoelif-catlovers-hlvrlkdfajz.ws.codeinstitute-ide.net'
 ]
 
 # Application definition
@@ -79,7 +79,7 @@ ROOT_URLCONF = 'codestar.urls'
 
 TEMPLATES = [
     { 'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -104,7 +104,8 @@ DATABASES = {
 
 CSRF_TRUSTED_ORIGINS = [
     "https://8000-ajgreaves-blog-lesson-pl-mjfxnpd4ht.us2.codeanyapp.com",
-    "https://*.herokuapp.com/"
+    "https://*.herokuapp.com/",
+    'https://8000-tomokoelif-catlovers-hlvrlkdfajz.ws.codeinstitute-ide.net',
 ]
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
