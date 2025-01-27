@@ -6,7 +6,7 @@ body {
     font-family: cursive;
     font-size: 2.4rem;
     font-weight: 900;
-    color: #00870e;
+    color: #00660a;
 }
 
 .thin {
@@ -18,7 +18,7 @@ body {
 }
 
 .dark-bg {
-    background-color: #00870e;
+    background-color: #00660a;
 }
 
 .main-bg {
@@ -92,7 +92,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #B60202;
 }
 
 .post-title {
@@ -107,75 +107,75 @@ body {
 
 .btn-signup,
 .btn-edit {
-    background-color: #2a74db;
-    color: #fff;
+    background-color: #1c55a6;
+    color: #ffffff;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #ffffff;
-    color: #2a74db;
+    color: #1c55a6;
 }
 
 .link {
-    color: #2a74db;
+    color: #1c55a6;
     text-decoration: none;
 }
 
 .link:hover,
 .link:active {
-    color: #2a74db;
+    color: #1c55a6;
     text-decoration: underline;
 }
 
 .btn-like {
-    color: #E84610;
+    color: #B60202;
     border: none;
     background: transparent;
 }
 
 .btn-delete {
     color: #ffffff;
-    background: #E84610;
+    background: #B60202;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: #B60202;
     background: transparent;
     border: none;
 }
 
 .faded {
-    color: rgb(172, 175, 175);
+    color: #1c55a6;
 }
 
 .approval {
-    color: rgb(222, 146, 168);
+    color: #B60202;
 }
 
 .navbar-text-muted {
     font-family: cursive; 
     font-size: 1.4rem; 
     font-weight: bold; 
-    color: #8F6B00;
+    color: #664D00;
 }
 
 .nav-link {
     font-family: 'Arial', sans-serif; 
     font-size: 1.0rem; 
     font-weight: bold; 
-    color: #2A74DB !important;
+    color: #1c55A6;
     text-transform: uppercase; 
 }
 
 .nav-link:hover {
-    color: blue !important; 
+    color: #0552BD; 
     text-decoration: underline; 
 }
 
 .nav-link.active {
-    color: blue !important; 
+    color: #0552BD; 
 }
 
 .card-text {
