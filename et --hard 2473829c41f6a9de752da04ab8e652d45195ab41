@@ -1,0 +1,321 @@
+[33mcommit 2473829c41f6a9de752da04ab8e652d45195ab41[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Mon Jan 27 12:58:39 2025 +0000
+
+    Refactor booking templates: update file structure, enhance styles, and create new booking pages
+
+[33mcommit af5ebf8a3c82349c57503469ad8876dfc62d1b6a[m
+Merge: 1473b6d 2586695
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Mon Jan 27 10:39:08 2025 +0000
+
+    Merge branch 'main' of https://github.com/tomokoelif/cat_lovers
+
+[33mcommit 1473b6d9bceaaa0dc89a79275237a811bf22d3b3[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Mon Jan 27 10:39:03 2025 +0000
+
+    Update color scheme: adjust body, button, and link colors for improved aesthetics
+
+[33mcommit 2586695b0ea3d62bf4afdd7cda00a774bb82672b[m
+Author: Tomoko <tomokoelif@gmail.com>
+Date:   Mon Jan 27 08:53:25 2025 +0000
+
+    Update README.md
+    
+    over view
+
+[33mcommit 333e92198818d331df471e0a8439453e902e2d3e[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Mon Jan 27 05:09:43 2025 +0000
+
+    Refactor booking views and templates: update context object name, improve base template structure, and adjust paths for URLs
+
+[33mcommit d98ef2b20eda1a0fff9788804ec9edeea3dcf7a0[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Mon Jan 27 04:21:27 2025 +0000
+
+    Add booking app with models, views, forms, and templates
+
+[33mcommit 3451a2061ba9d5c687c6321a981db82d1961fd6a[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sun Jan 26 21:34:55 2025 +0000
+
+    Update button styles: change background to blue and text color to white
+
+[33mcommit 04ab47abd8bafdb893a04477afcaeba53b090eba[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sun Jan 26 21:27:53 2025 +0000
+
+    Update author text color to transparent and change post link color to black
+
+[33mcommit 0d5be1f2fc6a8e60faa75b22e4cff7d5502e98ae[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sun Jan 26 21:20:48 2025 +0000
+
+    Update author text color to white and change post subtitle color to a darker shade
+
+[33mcommit 88c8bf4e95ed7182186870d870318ae7da91ae96[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sun Jan 26 18:02:41 2025 +0000
+
+    Refactor post detail layout: adjust image handling in masthead and update styles for comment section
+
+[33mcommit 53f3ed7781710410075809a7c9cea3ccb4d49110[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sun Jan 26 17:08:56 2025 +0000
+
+    Update styles for masthead and author sections, adjust image handling, and refine navbar text properties
+
+[33mcommit d102cae707e339e774a66970824715294ea1a935[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sun Jan 26 15:30:11 2025 +0000
+
+    Update post detail layout, adjust styles, and change debug setting
+
+[33mcommit 9af8ae5ee1476cf4556782919c1abd12a1e1f793[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sun Jan 26 06:21:06 2025 +0000
+
+    Refactor post detail layout and update styles for masthead and alerts
+
+[33mcommit 1d8cfcfeb9f341fd29b784a48c9866fadde94d34[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sun Jan 26 05:29:41 2025 +0000
+
+    Update text color and hover styles for navbar links
+
+[33mcommit 70ed2719215fab23fb437cf645a668471eefdb74[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sun Jan 26 05:25:11 2025 +0000
+
+    Update navbar styles: increase brand font size, add styles for navbar text and links, and adjust hover effects
+
+[33mcommit de6f3f16651312182c285b751abbce3054bc27d7[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sun Jan 26 05:02:23 2025 +0000
+
+    Update styles: change body background color to white, modify brand font properties, and adjust image flash width
+
+[33mcommit 29d71adbdb0c649cb7d83454df9b8f101f2b95c5[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sun Jan 26 01:43:33 2025 +0000
+
+    Update favicon link to new cat icon image
+
+[33mcommit 4abc71385f09f2bfd4759a23256aa2f162b76475[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sun Jan 26 01:37:47 2025 +0000
+
+    Set DEBUG to False for production environment
+
+[33mcommit ade93370eeb0ca77ce5e6b65722e3a3fe25a7767[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sun Jan 26 01:35:32 2025 +0000
+
+    Refactor blog post model: shorten title and slug max length, update featured image default, add description field, and adjust migration
+
+[33mcommit b8215270bf653752cbc314571ac01f4246b32e65[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sun Jan 26 00:22:45 2025 +0000
+
+    Fix favicon path in base template
+
+[33mcommit 923e33b7bd40bf6cc452b4d2be46b504c5822896[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sat Jan 25 23:26:07 2025 +0000
+
+    Update favicon to new cat icon image
+
+[33mcommit 658ab2a21f406325a0d5661aa93a8f7ab18d6750[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sat Jan 25 23:20:17 2025 +0000
+
+    Set DEBUG to False for production environment
+
+[33mcommit af2104eab2895c56a6c0ac9ce7a27ad4990c5501[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sat Jan 25 23:15:53 2025 +0000
+
+    Enable DEBUG mode for development and update favicon images; enhance about page styling and content.
+
+[33mcommit 4c1fc77d4e7164c963dc3e2c8c08debbf0dfc89f[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sat Jan 25 15:57:12 2025 +0000
+
+    Update navbar branding and add description/image fields to blog post model
+
+[33mcommit 92d05312fec3713b5013058a333de2d10356b5a7[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sat Jan 25 00:03:14 2025 +0000
+
+    Set DEBUG to False for production environment
+
+[33mcommit cd787953249752b8a5354627dce00074ed037266[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Sat Jan 25 00:03:02 2025 +0000
+
+    Fix profile image handling in about template to ensure correct display based on image availability
+
+[33mcommit ddbd863a88ace63154bf89c421767ddc6a0c8752[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Fri Jan 24 23:36:27 2025 +0000
+
+    Update image source in about starter template
+
+[33mcommit d4a6463f846e51000e00f0c193d9aa965c6276d5[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Fri Jan 24 22:54:12 2025 +0000
+
+    Fix HTML formatting by removing self-closing tags in blog templates
+
+[33mcommit 7a64c2c188c1acd2029459c44f46c684a80c2e66[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Fri Jan 24 22:30:45 2025 +0000
+
+    Enhance image handling and clean up blog post template
+
+[33mcommit 4ef1bc02df850422fd5d1173307f474949c7346d[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Fri Jan 24 21:38:41 2025 +0000
+
+    enable serving of image files
+
+[33mcommit 8c27a373728ac3ee218c727553cf9ba9fa27829c[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Fri Jan 24 16:15:14 2025 +0000
+
+    Add collaboration request form and enhance comment functionality
+
+[33mcommit d28d4f38af81fb0f9fd89a372edfac23576420ff[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Fri Jan 24 11:59:42 2025 +0000
+
+    Update signup page layout and change DEBUG setting for development
+
+[33mcommit 23020d94c0aae2e1c6819b76c5f90c379286ec17[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Fri Jan 24 11:18:29 2025 +0000
+
+    Set DEBUG to False for production readiness
+
+[33mcommit f59b795b2196c9bd5c9166dfa52d1b5b752d228a[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Fri Jan 24 11:16:54 2025 +0000
+
+    added authentication
+
+[33mcommit 3977f003e25daeec21d51af3786d6e32498ffbf4[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Fri Jan 24 01:33:27 2025 +0000
+
+    Add comment functionality to post detail view
+
+[33mcommit 46124c879e21099ee2ba2cb152e043b07c9c6b71[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Fri Jan 24 00:57:05 2025 +0000
+
+    Add comments section to post detail view
+
+[33mcommit aa108217f165b93048b4e6164a59e093ddd3f794[m
+Merge: 07fda53 1cc049b
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Fri Jan 24 00:09:16 2025 +0000
+
+    Merge branch 'main' of https://github.com/tomokoelif/cat_lovers
+
+[33mcommit 07fda531120b71d7bcc99408bd3b6e0255897ed1[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Thu Jan 23 23:54:51 2025 +0000
+
+    Add About app
+
+[33mcommit 1cc049b5a8e57d7eb57fa4a8a4189f5a30f93647[m
+Author: Tomoko <tomokoelif@gmail.com>
+Date:   Thu Jan 23 21:35:40 2025 +0000
+
+    Add files via upload
+
+[33mcommit 7688cfebb124250bdfde574b62fbb5450067f0f3[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Thu Jan 23 19:44:42 2025 +0000
+
+    added post_detail view
+
+[33mcommit e6b02a76db63133c64139e37d0c8243b1c44ad61[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Thu Jan 23 15:10:57 2025 +0000
+
+    update ALLOWED_HOSTS
+
+[33mcommit d090c56ea022f31e4a538bb51bfbcfe30747d3a7[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Thu Jan 23 13:05:11 2025 +0000
+
+    enable serving of static files
+
+[33mcommit 6ed671b5335df98a592d17ce8521c482e4a5fb6f[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Thu Jan 23 11:12:15 2025 +0000
+
+    Update footer copyright to reflect 2023 and Cat Lovers
+
+[33mcommit 55972840fc0e70305579de08accb81ab34d2bef7[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Thu Jan 23 10:42:39 2025 +0000
+
+    Add Summernote integration and update blog URLs
+
+[33mcommit 498e70cef976d3b90aa1c70468971c315a543b6f[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Wed Jan 22 16:11:34 2025 +0000
+
+    Add Comment model and update Post model with excerpt and updated_on fields
+
+[33mcommit 0d93595a289fbbe198bc7924da15e49e775cae9e[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Wed Jan 22 14:27:25 2025 +0000
+
+    adds a Post model
+
+[33mcommit b8c24fd6b3305169a132a72446d4fa4621cdefa0[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Wed Jan 22 13:49:45 2025 +0000
+
+    Update database configuration to use PostgreSQL for production
+
+[33mcommit 3dbccec027962bc8aad17d9f14127ac0c8612999[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Wed Jan 22 13:41:34 2025 +0000
+
+    Update settings for development environment and add database configuration
+
+[33mcommit df739353be1db548605b96c886fbfd99ff3c7b52[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Wed Jan 22 12:59:34 2025 +0000
+
+    Disable debug mode for production environment
+
+[33mcommit a112cf45c3590e102d1d393206ac7276fda5cb83[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Wed Jan 22 12:46:23 2025 +0000
+
+    Enable debug mode for development and update allowed hosts
+
+[33mcommit b4d6fa0cde7d4f5780ac064a5600fac658d67f81[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Wed Jan 22 12:36:03 2025 +0000
+
+    Enable debug mode and update allowed hosts for development environment
+
+[33mcommit 24ac519b6b46f606921ec3a2e27bf5425f55e947[m
+Author: Tomoko Koide <tomokoelif@gmail.com>
+Date:   Wed Jan 22 11:49:25 2025 +0000
+
+    Add initial project structure with Django blog app and configuration
+
+[33mcommit 8aeb6ecf9e381303062d8161c2dc74ba2aa92731[m
+Author: Tomoko <tomokoelif@gmail.com>
+Date:   Wed Jan 22 00:40:18 2025 +0000
+
+    Initial commit
