@@ -48,7 +48,7 @@ class CreateBooking(LoginRequiredMixin, CreateView):
             user=self.request.user, date=form.instance.date).count()
 
         # Limit the maximum number of active bookings to 4
-        if active_bookings_count >= 4:
+        if active_bookings_count >= 2:
             messages.error(
                 self.request,
                 "You have reached the maximum number of active bookings."
