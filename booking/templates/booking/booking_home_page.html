@@ -4,19 +4,40 @@
 
 {% block content %}
 
-<div class="container my-4 text-center">
-    <div class>
-        <h1 class="section-title" id="booking" style="color: #00660A; font-family: cursive;">Your Bookings</h1>
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <img src="{% static 'images/cat.jpg' %}" alt="cat" class="img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h2 class="section-title" id="booking" style="color: #00660A; font-family: cursive;">Your Bookings</h2>
+            <!-- Hotel rules section -->
+            <div class="container my-4 w-100">
+                <h1 class="section-title" id="booking-rules" style="color: #664D00; font-family: cursive;">Cat Hotel</h1>
+                <ul class="park-rules section-p my-3 text-start">
+                    <li>The bright and open playroom is equipped with a web camera, a large cat tower and a catwalk.</li>
+                    <li>The Hotel is open everyday 8am to 8pm. Please abide by your entry and exit time.</li>
+                    <li>No more than <strong>2</strong> cats per person.</li>
+                </ul>
+            </div>
+        </div>    
+        <div class="text-center">
+            <h5 class="section-p-rules" style="color: #00660A; font-family: cursive;">Thank you for using Cat Lovers Hotel</h5>
+        </div>
+        <div class="text-center my-4">
+            <a href="{% url 'booking_create' %}" title="Make a Booking">
+                <button class="btn btn-primary" style="background-color: #1c55A6;">Make a Booking</button>
+            </a>
+        </div>
     </div>
-    <div class="col-md-3 text-center text-md-start">
-        <img src="{% static 'images/cat.jpg' %}" alt="cat" class="img-fluid">
-    </div>
-   
+</div>
+
+<div class="container text-center">
     <div class="col-md-3 text-center text-md-end">
         <!-- Warning message for user about max bookings reached, only displays when 4 bookings reached -->
-        {% if request.user.bookings.count >= 4 %}
+        {% if request.user.bookings.count >= 2 %}
         <div class="message-box mb-2 mr-5">
-            <p class="text-center booking-p">You have reached the maximum number of <strong>4</strong> active bookings.</p>
+            <p class="text-center booking-p" style="color: #B60202;">You have reached the maximum number of <strong>2</strong> active bookings.</p>
         </div>
         {% endif %}
     </div>
@@ -24,7 +45,6 @@
 
 {% if request.user.bookings.exists %}
     <div class="container">
-        <h2>Your Bookings</h2>
         <table class="table">
             <thead>
                 <tr>
@@ -66,24 +86,6 @@
     </div>
 {% endif %}
 
-<!-- Park rules section -->
-<h2 class="section-title text-center mt-4" id="booking-rules" style="color: #664D00; font-family: cursive;">Cat Hotel</h2>
-<div class="d-flex justify-content-center">
-    <ul class="park-rules section-p my-3" style="width: 50%;">
-        <li class="text-start">The bright and open playroom is equipped with a web camera, a large cat tower and a catwalk.</li>
-        <li class="text-start">The Hotel is open everyday 8am to 8pm. Please abide by your entry and exit time.</li>
-        <li class="text-start">No more than <strong>4</strong> cats per person.</li>
-    </ul>
-</div>   
-<div class="text-center">
-    <p class="section-p-rules" style="font-size: 1.25rem;">Thank you for using Cat Lovers Hotel</p>
-</div>
-
-    <div class="text-center my-4">
-        <a href="{% url 'booking_create' %}" title="Make a Booking">
-            <button class="btn btn-primary" style="background-color: #1c55A6;">Make a Booking</button>
-        </a>
-    </div>
 
 
 {% endblock %}
