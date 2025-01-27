@@ -4,35 +4,34 @@
 
 {% block content %}
 
-
 <div class="container my-4 text-center">
-    <div class="row align-items-center">
-        <div class="col-md-6 offset-md-3">
-            <h1 class="section-title mb-3" id="booking">Your Bookings</h1>
-        </div>
-        <div class="col-md-3 text-center text-md-end">
-            <!-- Warning message for user about max bookings reached, only displays when 4 bookings reached -->
-            {% if request.user.bookings.count >= 4 %}
-            <div class="message-box mb-2 mr-5">
-                <p class="text-center booking-p">You have reached the maximum number of <strong>4</strong> active
-                    bookings.</p>
-            </div>
-            {% else %}
-            <a href="{% url 'booking_create' %}" class="my-4" title="Make a Booking">         
-                <button class="btn btn-primary">Make a Booking</button>
-            </a>
-            {% endif %}
-        </div>
+    <div class>
+        <h1 class="section-title" id="booking" style="color: #00660A; font-family: cursive;">Your Bookings</h1>
     </div>
-    {% if request.user.bookings.all %}
-    <div class="table-responsive my-4 w-75 mx-auto">
-        <table class="table table-striped">
+    <div class="col-md-3 text-center text-md-start">
+        <img src="{% static 'images/cat.jpg' %}" alt="cat" class="img-fluid">
+    </div>
+   
+    <div class="col-md-3 text-center text-md-end">
+        <!-- Warning message for user about max bookings reached, only displays when 4 bookings reached -->
+        {% if request.user.bookings.count >= 4 %}
+        <div class="message-box mb-2 mr-5">
+            <p class="text-center booking-p">You have reached the maximum number of <strong>4</strong> active bookings.</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% if request.user.bookings.exists %}
+    <div class="container">
+        <h2>Your Bookings</h2>
+        <table class="table">
             <thead>
                 <tr>
-                    <th>Booking Date</th>
-                    <th>Booking Time</th>
-                    <th>cat Name</th>
-                    <th>Edit/Delete Booking</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Cat Name</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -41,20 +40,20 @@
                     <td>{{ booking.date }}</td>
                     <td>{{ booking.time }}</td>
                     <td>{{ booking.cat_name }}</td>
-                    <td>{% if request.user == booking.user %}
+                    <td>
+                        {% if request.user == booking.user %}
                         <div class="text-center">
                             <!-- edit/delete icon display -->
                             <div class="d-flex justify-content-center justify-content-md-start">
                                 <div class="col">
-                                    <a href="{% url 'booking_edit' booking.id %}" class="btn btn-link"
-                                        title="Edit Booking"><img src="{% static 'icons/edit_booking.png' %}"
-                                            alt="edit booking" class="icon-delete-btn"></a>
+                                    <a href="{% url 'booking_edit' booking.id %}" class="btn btn-link" title="Edit Booking">
+                                        Edit Booking
+                                    </a>
                                 </div>
                                 <div class="col">
-                                    <a href="{% url 'booking_delete' booking.id %}" class="btn btn-link"
-                                        title="Delete Booking"><img
-                                            src="{% static 'icons/delete_booking.png' %}" alt="delete booking"
-                                            class="icon-delete-btn"></a>
+                                    <a href="{% url 'booking_delete' booking.id %}" class="btn btn-link" title="Delete Booking">
+                                        Delete Booking
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -65,19 +64,26 @@
             </tbody>
         </table>
     </div>
-    {% endif %}
-    <!-- Park rules section -->
-    <div class="container my-4 w-100">
-        <h2 class="section-title" id="booking-rules">Park Rules</h2>
-        <ol class="park-rules section-p my-3">
-            <li> The Hotel is open everyday 8am to 8pm.Please abide by your entry and exit time. </li>
-            <li> No more than <strong>4</strong> cats per person.</li>
-        </ol>
-        <div class="text-center">
-            <p class="section-p-rules">Thank you for using Cat Lovers Hotel</p>
-        </div>
-        
-    </div>
+{% endif %}
+
+<!-- Park rules section -->
+<h2 class="section-title text-center mt-4" id="booking-rules" style="color: #664D00; font-family: cursive;">Cat Hotel</h2>
+<div class="d-flex justify-content-center">
+    <ul class="park-rules section-p my-3" style="width: 50%;">
+        <li class="text-start">The bright and open playroom is equipped with a web camera, a large cat tower and a catwalk.</li>
+        <li class="text-start">The Hotel is open everyday 8am to 8pm. Please abide by your entry and exit time.</li>
+        <li class="text-start">No more than <strong>4</strong> cats per person.</li>
+    </ul>
+</div>   
+<div class="text-center">
+    <p class="section-p-rules" style="font-size: 1.25rem;">Thank you for using Cat Lovers Hotel</p>
 </div>
+
+    <div class="text-center my-4">
+        <a href="{% url 'booking_create' %}" title="Make a Booking">
+            <button class="btn btn-primary" style="background-color: #1c55A6;">Make a Booking</button>
+        </a>
+    </div>
+
 
 {% endblock %}

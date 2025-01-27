@@ -7,9 +7,9 @@
 
 {% block content %}
 
-<div class="text-center">
-    <h1 class="text-center section-title mx-auto" id="booking">Edit Booking</h1>
-    <form method="POST" enctype="multipart/form-data" class="text-center w-75 mx-auto p-2 booking-section">
+<div class="container" style="max-width: 800px; margin: auto;">
+    <h2>Edit Booking</h2>
+    <form method="post">
         {% csrf_token %}
         {% if form.non_field_errors %}
         <!-- Unavailable booking message -->
@@ -17,20 +17,10 @@
             <em>This date and time combination is unavailable, please choose again.<em>
         </div>
         {% endif %}
-        <div class="row mx-auto">
-            <div class="col m-4">
-                <h4 class="text-center mb-4">Your Details</h4>
-                {{ form.first_name|as_crispy_field }}
-                {{ form.last_name|as_crispy_field }}
+        <div class="row">
+            <div class="col-md-6">
+                {{ form.name|as_crispy_field }}
                 {{ form.email|as_crispy_field }}
-                {{ form.dog_name|as_crispy_field }}
-                {{ form.breed|as_crispy_field }}
-                {{ form.color|as_crispy_field }}
-                {{ form.is_vaccinated|as_crispy_field }}
-                {{ form.gender|as_crispy_field }}
-            </div>
-            <div class="col m-4">
-                <h4 class="text-center mb-4">Choose Date & Time</h4>
                 {{ form.date|as_crispy_field }}
                 {% if form.date.errors %}
                 <div class="alert alert-danger" role="alert">
@@ -38,26 +28,15 @@
                 </div>
                 {% endif %}
                 {{ form.time|as_crispy_field }}
-                {% if form.time.errors %}
-                <div class="alert alert-danger" role="alert">
-                    {{ form.time.errors|safe }}
-                </div>
-                {% endif %}
             </div>
-            <div class="col m-4">
-                <h4 class="text-center mb-4">Book a second dog?<em>(Optional)</em></h4>
-                <div class="mx-auto text-center" id="dog2_section">
-                    {{ form.dog_name2|as_crispy_field }}
-                    {{ form.breed2|as_crispy_field }}
-                    {{ form.color2|as_crispy_field }}
-                    {{ form.is_vaccinated2|as_crispy_field }}
-                    {{ form.gender2|as_crispy_field }}
-                </div>
+            <div class="col-md-6">
+                {{ form.cat_name|as_crispy_field }}
+                {{ form.breed|as_crispy_field }}
+                {{ form.color|as_crispy_field }}
+                {{ form.gender|as_crispy_field }}
             </div>
         </div>
-        <div class="text-center">
-            <button type="submit" class="btn btn-custom booking-btn mt-2">Edit Booking</button>
-        </div>
+        <button type="submit" class="btn btn-primary mt-3" style="background-color: #1c55a6;">Submit</button>
     </form>
 </div>
 
