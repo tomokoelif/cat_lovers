@@ -68,12 +68,12 @@ For Admin access with relevant sign-in information: [CatLovers Admin](https://ca
 
 Cat Lovers is a social media and booking app for cat rescue organizations. Users can:
 
- -Join the Cat Lovers community
- -Create your own profile
- -Add and interact with posts
- -Create and manage reservations
- -Upload photos
- -Learn more about Cat Cafe, Cat Hotel
+ - Join the Cat Lovers community
+ - Create your own profile
+ - Add and interact with posts
+ - Create and manage reservations
+ - Upload photos
+ - Learn more about Cat Cafe, Cat Hotel
 
 Cat Lovers is accessible from all browsers and is fully responsive on different screen sizes. Its purpose is to create a safe and informed community where cat lovers can browse cute cat photos, interact with each other at Cat Cafe, and make essential bookings for Cat Hotel reservations. I created this site to help people find homes for rescue cats. I want people to first get interested in the photos on the site, play with the cats at the cat cafe, and then become a foster parent. I also run a cat hotel where you can leave your own cat while traveling.
 
