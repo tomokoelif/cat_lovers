@@ -248,6 +248,25 @@ In future iterations, we plan to implement the following features:
 - **Heroku** - Deployment and hosting
 - **Balsamiq** - Wireframes and design prototypes
 
+## AI Implementation and Orchestration
+
+### Use Cases and Reflections:
+  - **Code Creation:** 
+    - Reflection: Strategic use of AI allowed for rapid prototyping, with minor adjustments for alignment with project goals. 
+    - I asked Copilot everything in Japanese. So the comment became japanese in the code. 
+  - **Debugging:** 
+    - Reflection: Key interventions included resolving logic errors and enhancing maintainability, with a focus on simplifying complex logic to make it accessible.
+  - **Performance and UX Optimization:** 
+    - Reflection: Minimal manual adjustments were needed to apply AI-driven improvements, which enhanced application speed and user experience for all users.
+  - **Automated Unit Testing:**
+    - Reflection: Adjustments were made to improve test coverage and ensure alignment with functionality. Prompts were used to generate inclusive test cases that considered edge cases for accessibility.
+
+- **Overall Impact:**
+  - AI tools streamlined repetitive tasks, enabling focus on high-level development.
+  - Efficiency gains included faster debugging, comprehensive testing, and improved code quality.
+  - Challenges included contextual adjustments to AI-generated outputs, which were resolved effectively, enhancing inclusivity.
+
+
 ## **Testing**
  testing result is here ! () 
 
