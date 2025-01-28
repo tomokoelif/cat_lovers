@@ -96,7 +96,6 @@ This combination ensures clarity, accessibility, In keeping with the theme of an
 - The rest of the body text and interactive elements will use **Catamaran** for its readability and clean look.
 
 ## Project Planning
-Cat Lovers' main goal is to support rescued cats and find them homes. We protect cats that would have been euthanized and upload photos of rescued cats every week, or meet them at a cat cafe to help them find homes that will take good care of them
 
 ### Strategy Plane
 Cat Lovers' main goal is to support rescued cats and find them homes. We protect cats that would have been euthanized and find homes to care for them. We upload photos of rescued cats every week and make it easy for interested people to comment. Users can send us an email, interact with them at the cat cafe, and become their foster parents.
