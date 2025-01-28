@@ -186,126 +186,54 @@ All data is securely handled with Django’s security features, including:
 - Data encryption for sensitive information like passwords using Django's built-in authentication.
 - Role-based access control to restrict sensitive data to authorized users.
 
-Role-based access control (RBAC) is implemented using Django's Group and Permission systems. Patients, specialists, and admins are grouped based on their role, and their access to features and sensitive information is restricted accordingly. Patients can only access their own medical data and booking history, while specialists can only view data related to their consultations. Admins have the broadest access for system management.
+Role-based access control (RBAC) is implemented using Django's Group and Permission systems. Patients, specialists, and admins are grouped based on their role, and their access to features and sensitive information is restricted accordingly. User can only access their own comment data and booking history. Admins have the broadest access for system management.
 
 ## Features
 
 ## User View - Registered/Unregistered
 
-It was important to me from the beginning that FreeFido be accessible to an unregistered user, in some capacitites. I wanted the website to sell the product to a new user quickly by immediately inviting them into the community through the park's information, articles and gallery sections. The following is a breakdown of the site's accessibility for registered/unregistered users:
+It was important to me from the beginning that Cat Lovers be accessible to non-registered users in some way. We wanted the website to encourage new users to adopt or support our work by instantly inviting them to join our community through information about our work and a gallery section of rescued cats that changes weekly. Below is a breakdown of the site's accessibility for registered and non-registered users:
 
 | Feature   | Unregistered User | Registered, Logged-In User |
 |-----------|-------------------|-----------------|
 | Home Page | Visable           | Visable         |
-| Profile   | Not Visible - 'Profile' icon only appears for registered, logged-in users | Visable and full feature interaction available |
 | Articles  | Visable but not interactable via 'Likes/Comments', 'Add Article' button not visible | Visable and full feature interaction available |
+| Messaging | writing           | writing         |
 | Booking   | Icon visible but redirected to Sign In page/Sign Up through link | Visable and full feature interaction available |
-| Gallery   | Visable but no option to 'Add Photo' | Visable and full feature interaction available |
-| Visit Us  | Visable and map interaction available | Visible and map interaction available |
+
+### User Registration Process
+When a new user registers, they will appear on the Admin Site. Regular users can comment on posts, edit their comments, and delete them.
+
+**Administrators:** Admin accounts are created manually by other existing administrators or super users in the Django admin area. This ensures that the creation of admin-level accounts is tightly controlled and complies with the platform's internal policies.
+This registration flow was chosen to ensure role-based control and security. Allowing users to register freely on the platform allows them easy access to services. However, administrators require a higher level of trust and verification, so a manual vetting process is undertaken. This ensures that only approved administrators can manage sensitive tasks such as consultations and platform configuration, maintaining the integrity and security of the system.
+
+### Reservation System
+Cat Lovers allows users to make reservations for cat hotels directly through the platform.
+
+### Messaging System 
+Cat Lovers provides a secure messaging system for communication between the administration and potential adopters of cats. You can send messages without registering on the ABOUT site.
+
+### Profile Management 。
+Superusers can view their own profile on the Admin Site and on the ABOUT Site.
+
+### Confirmation Messages
+- **User Feedback**: Confirmation messages are shown to users when important actions are performed, such as logging in, booking an appointment, or sending a message. These messages help ensure a smooth user experience by providing feedback on successful actions.
 
 ## CRUD Functionality
 
-Users are able to Create, Read, Update and Delete their shared information on FreeFido. Some features make full CRUD functionality available, whilst others present the necessary options only. Here is my CRUD breakdown for FreeFido:
+You can create, read, update and delete shared information in Cat Lovers. Some features will have full CRUD functionality available, while others will only show the options you need. Below is a breakdown of CRUD for Cat Lovers:
 
 | Feature | Create | Read | Update | Delete |
 |---------|--------|------|--------|--------|
 | Profile | Created upon registration | Yes | Yes | Full Profile deletion is currently only available to Admin upon User Account deletion, the profile dashboard clears automatically if a user removes all of their articles or bookings |
 | Articles | Yes | Yes | Yes | Yes |
 | Bookings | Yes | Yes | Yes | Yes |
-| Gallery | Yes | Yes | No - this feature felt unneccessary as it's intention is a 'quick-sharing' of a photo, a minimal amount of information is required and users are able to delete the image if they wish | Yes |
+| Gallery | Yes | Yes | Yes | Yes |
 
-### User View - Registered/Unregistered
-HealMate offers distinct user views. Unregistered users can search for specialists, but registered users have full access to the appointment system and dashboard functionalities.
-
-### User Registration Process
-- **Patients:** When a new user registers, they are automatically assigned to the "Patient" group. This ensures that all users begin with patient privileges and access, allowing them to book appointments and view specialist profiles. During the registration process, essential patient profile information is captured (e.g., contact number, address, date of birth, gender). After the registration is complete, a corresponding PatientProfile is automatically created and associated with the user.
-
-- **Specialists:** During the registration process, essential patient profile information is captured (e.g., contact number, address, date of birth, gender). After the registration is complete, a corresponding PatientProfile is automatically created and associated with the user.
-
-- **Admins:** Admin accounts are created manually by other existing admins or superusers within the Django administration area. This ensures that the creation of administrative-level accounts is strictly controlled and follows the platform's internal policies.
-
-This registration flow was chosen to ensure role-based control and security. Patients are the primary users of the platform, and allowing them to register freely makes the service accessible. However, specialists and admins require a higher level of trust and validation, so they undergo a manual vetting process. This ensures that only qualified professionals and authorized admins can manage sensitive tasks such as consultations and platform settings, which helps maintain the integrity and security of the system.
-
-### Role-Based Dashboard Features
-
-**HealMate includes role-based dashboards for different types of users:**
-- **Patient Dashboard:** Allows patients to view their profile, manage appointments, and access medical records.
-
-- **Specialist Dashboard:** Specialists can manage their availability, view and approve appointments, and review patient profiles.
-
-- **Admin Dashboard:** Admins can manage users (patients, specialists) and vet specialist applications. They also have access to system-wide settings.
-
-### Role-Based Navigation
-(Not the same as Role-Based Dashboard Features)
-
-The navigation bar in HealMate adapts dynamically based on the user's role. This feature ensures that users see only the relevant options for their role, improving usability and reducing clutter in the interface.
-
-- **Specialists**: When logged in, specialists will only see links to their dashboard, profile, password change, and logout options. General site navigation like "Home," "About," or "Join Us" will be hidden.
-- **Patients**: Logged-in patients have access to their dashboard, profile, password change, and logout options, while still seeing general navigation links like "Home" and "About."
-- **Admins**: Admins will see their dedicated dashboard link and other relevant options.
-- **Non-Authenticated Users**: Users who are not logged in will only see options to log in or register on the platform.
-
-This role-based navigation provides a tailored experience for every user type, streamlining access to the most relevant pages.
-
-
-### Soft Delete/Archiving for Patient Accounts
-HealMate includes a soft delete mechanism to ensure data integrity and prevent accidental loss of important user information. Instead of permanently deleting accounts, users can request a soft deletion, which deactivates their account while retaining their data in the system.
-
-**How It Works:**
-- **Patient Account Deactivation:** Patients can request to have their account deactivated through a user-friendly option on their dashboard.
-- **Data Preservation:** When a patient requests account deletion, their profile is marked as inactive rather than removed from the database. This means the patient’s information, appointments, and records remain available for future use or audit purposes.
-- **Admin Reactivation:** Admins have the ability to reactivate patient accounts from the Django admin panel. This ensures that patients can return to the platform with all their previous data intact, avoiding any data loss or system disruptions.
-
-**Benefits:**
-- **System Integrity:** Prevents errors that could arise from full account deletions, such as broken relationships with other models (e.g., appointments, messages, feedback).
-- **User Flexibility:** Patients can choose to deactivate their account temporarily and return at a later date without losing their medical history or profile information.
-- **Security:** Only admins have the power to fully manage account reactivations, ensuring oversight and control over patient data.
-
-
-### Appointment Booking System
-HealMate allows patients to book appointments with specialists directly through the platform. The system includes:
-- **Specialist Search**: Patients can search for specialists based on name, specialty, or location.
-- **Book Appointment**: Patients can book an appointment directly from the specialist's profile page.
-- **Appointment Management**: Specialists and patients can view and manage upcoming appointments through their respective dashboards.
-- **Appointment Cancellation**: Patients and specialists have the ability to cancel appointments with a confirmation prompt.
-
-
-### Messaging System
-HealMate provides a secure messaging system for communication between patients and specialists:
-- **Inbox**: Users can view received messages and reply to messages directly from their inbox.
-- **Send Message**: Patients can send messages to specialists they have appointments with, and vice versa.
-- **Message History**: All sent and received messages are stored and displayed in the user's message history.
-- **Real-Time Messaging**: The system is designed to support real-time messaging between users.
-
-
-### Profile Management
-Each user can manage their profile through the dashboard:
-- **Patient Profile**: Patients can view and update personal details such as contact information, medical history, and emergency contacts.
-- **Specialist Profile**: Specialists can view and update their bio, specialty, location, and upload profile images.
-- **Profile Images**: Specialists can upload and update their profile image, which appears on the search results and specialist details page.
-
-### Confirmation Messages
-- **User Feedback**: Confirmation messages are shown to users when important actions are performed, such as logging in, booking an appointment, or sending a message. These messages help ensure a smooth user experience by providing feedback on successful actions.
-
-### CRUD Functionality
-
-The following **CRUD** functionalities are implemented within HealMate:
-
-- **Create**: Patients are automatically assigned a profile upon registration. This profile includes key fields such as contact information, address, and medical history.
-  
-- **Read**: Patients can view their profile and associated information, including medical history and emergency contact details, from their dashboard.
-
-- **Update**: Patients have the ability to update their profile information, including personal data (e.g., contact number, address, and medical history), via a dedicated "Edit Profile" page.
-
-- **Delete (Soft Delete)**: Patients can request to deactivate their account through a **soft delete** mechanism. This deactivation preserves the patient’s data within the system while preventing further access until reactivation by an admin. The admin can reactivate the account from the Django admin panel at any time, restoring full access for the patient.
-
-This CRUD cycle is central to the **PatientProfile** model, ensuring that users can fully manage their personal information while providing system integrity with the soft delete functionality.
-
-
-## Future Features
-I plan to implement the following in future iterations:
-- Push notifications for upcoming appointments.
-- Integrate payment system for paid consultations.
+## Future features
+In future iterations, we plan to implement the following features:
+- Video broadcasting function for Cat Hotel
+- Online payments
 
 ## Technologies & Languages Used
 - HTML5 - Markup language for structuring the website
@@ -328,6 +256,7 @@ I plan to implement the following in future iterations:
 - **Balsamiq** - Wireframes and design prototypes
 
 ## **Testing**
+ testing result is here ! () 
 
 ### **Validation Testing**
 
@@ -344,58 +273,8 @@ All code has been validated through:
 
 - **Browser Compatibility**: The website has been tested on Chrome, Firefox, Safari, and Edge.
 - **Responsiveness**: The platform has been tested on mobile, tablet, and desktop devices to ensure optimal performance.
-- **Role-Based Dashboard Testing:** Each user type (patient, specialist, admin) was tested to ensure they were directed to the correct dashboard after login. Patients were assigned to the correct group during registration, and specialists were manually added by admins. The redirection logic was thoroughly tested by registering new users and ensuring role-based access was properly applied.
 - **Automatic Assignment Testing:** Tests were conducted to verify that newly registered users are automatically assigned to the "Patient" group and that their PatientProfile was successfully created. This was confirmed through both the user interface and the Django admin panel.
 
-### **Bugs**
-- ### Bug Fix #1: `DISABLE_COLLECTSTATIC` Setting Causing Heroku Deployment Failure
-
-**Issue:**  
-During the deployment to Heroku, the following error occurred:
-
-The error was caused by the absence of proper static file handling and a misconfiguration in the `INSTALLED_APPS` list in `settings.py`.
-
-**Cause:**  
-- The `DISABLE_COLLECTSTATIC=1` config variable was used in Heroku to prevent collectstatic from running during the initial setup.
-- There was a duplicate entry for `django.contrib.staticfiles` in `INSTALLED_APPS`, which caused an error when trying to collect static files.
-
-**Steps Taken to Fix:**
-1. Fixed the duplicate `django.contrib.staticfiles` entry in `INSTALLED_APPS`.
-2. Ensured the static and media handling was properly set up with Cloudinary and Whitenoise.
-3. Deleted the `DISABLE_COLLECTSTATIC=1` from Heroku's Config Vars.
-4. Deployed again, which successfully collected static files and completed the deployment.
-
-
-### Bug Fix #2: Permission Issues with Dashboard Access
-
-**Issue**
-
-Users are unable to access the Admin, Patient, and Specialist dashboards even though they are assigned to the correct user groups in the Django admin panel. The application either throws a 403 Forbidden error or does not recognize the users' group memberships.
-
-**Cause**
-
-The issue seems to be related to incorrect handling of group membership checks in the views or misconfiguration of user group assignments within the Django admin panel.
-
-### Steps Taken to Fix
-
-1. **Investigate Group Check Functions**:
-   - Reviewed the group-check functions (`is_admin`, `is_patient`, `is_specialist`) in `views.py` to ensure they correctly identify user groups.
-   - Confirmed that the group names match those set in the Django admin.
-
-2. **Validate Group Assignments**:
-   - Ensured that users are properly assigned to the correct groups (Admin, Patient, Specialist) in the Django Admin panel.
-   - Verified that the group names in the code match the group names set up in Django admin.
-
-3. **Testing**:
-   - Tested access with both existing and newly created users to ensure they can access their respective dashboards without issues.
-   - Verified that group membership was properly recognized for all users.
-
-4. **Revert Changes**:
-   - Once the issue was resolved, reverted any temporary modifications to the views back to their original implementation.
-
-5. **Verify Access Control**:
-   - Tested edge cases, such as users without group assignments attempting to access dashboards, to ensure proper behavior.
-   - Confirmed that custom `PermissionDenied` logic displayed the correct 403 error page for unauthorized access attempts.
 
 **Outcome**
 
