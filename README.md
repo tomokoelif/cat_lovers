@@ -169,7 +169,7 @@ Cat Lovers' ERD shows relationships between users, admins, reservations, etc. Th
 
 The ERD also shows the role-based structure of the platform. Each user is assigned to a specific group (unregistered, registered admins) that determines their level of access. Unregistered and registered users models are linked to the user model, and each profile type has specific fields related to its role. Administrators have broader access to manage both registered users and platform data.
 
-![ERD Illustration](docs/erd/erd-healmate.png)
+https://docs.google.com/presentation/d/1fwjr3xpoD7gwTz0T8HoEDloLuT-5-wK1WVb_wWhaWRo/edit#slide=id.p
 
 The above ERD was generated using Python Extension - pygraphviz and pydotplus. Documentation at https://django-extensions.readthedocs.io/en/latest/graph_models.html.
 
