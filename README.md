@@ -148,21 +148,27 @@ The site is structured around an easy-to-use interface. The primary menu include
 Wireframes were created for the following key pages to ensure an intuitive user journey:
 - **Home Page**
 
-![Homepage Wireframe](docs/wireframe/homepage-large-screen.png)
+![Homepage Wireframe](https://github.com/tomokoelif/cat_lovers/blob/main/Cat%20Lovers%20PC%20Home.png)
 
-![Homepage Wireframe](docs/wireframe/homepage-mobile.png)
+![Homepage Wireframe](https://github.com/tomokoelif/cat_lovers/blob/main/Cat%20Lovers%20mobile%20Home.png)
 
 - **Specialist Search Results**
 
-![Homepage Wireframe](docs/wireframe/search-result-large-screen.png)
+![Homepage Wireframe](https://github.com/tomokoelif/cat_lovers/blob/main/Cat%20Lovers%20PC%20About.png)
 
-![Homepage Wireframe](docs/wireframe/search-result-mobile.png)
+![Homepage Wireframe](https://github.com/tomokoelif/cat_lovers/blob/main/Cat%20Lovers%20mobile%20About.png)
 
 - **Appointment Booking**
 
-![Homepage Wireframe](docs/wireframe/booking-page-large-screen.png)
+![Homepage Wireframe](https://github.com/tomokoelif/cat_lovers/blob/main/Cat%20Lovers%20PC%20Book.png)
 
-![Homepage Wireframe](docs/wireframe/booking-page-mobile.png)
+![Homepage Wireframe](https://github.com/tomokoelif/cat_lovers/blob/main/Cat%20Lovers%20mobile%20Book.png)
+
+- **Appointment Booking**
+
+![Homepage Wireframe](https://github.com/tomokoelif/cat_lovers/blob/main/Cat%20Lovers%20PC%20Form.png)
+
+![Homepage Wireframe](https://github.com/tomokoelif/cat_lovers/blob/main/Cat%20Lovers%20mobile%20Form.png)
 
 - **User Dashboards** (Patient and Specialist)
 - **Admin Panel**
@@ -187,6 +193,30 @@ All data is securely handled with Django’s security features, including:
 Role-based access control (RBAC) is implemented using Django's Group and Permission systems. Patients, specialists, and admins are grouped based on their role, and their access to features and sensitive information is restricted accordingly. Patients can only access their own medical data and booking history, while specialists can only view data related to their consultations. Admins have the broadest access for system management.
 
 ## Features
+
+## User View - Registered/Unregistered
+
+It was important to me from the beginning that FreeFido be accessible to an unregistered user, in some capacitites. I wanted the website to sell the product to a new user quickly by immediately inviting them into the community through the park's information, articles and gallery sections. The following is a breakdown of the site's accessibility for registered/unregistered users:
+
+| Feature   | Unregistered User | Registered, Logged-In User |
+|-----------|-------------------|-----------------|
+| Home Page | Visable           | Visable         |
+| Profile   | Not Visible - 'Profile' icon only appears for registered, logged-in users | Visable and full feature interaction available |
+| Articles  | Visable but not interactable via 'Likes/Comments', 'Add Article' button not visible | Visable and full feature interaction available |
+| Booking   | Icon visible but redirected to Sign In page/Sign Up through link | Visable and full feature interaction available |
+| Gallery   | Visable but no option to 'Add Photo' | Visable and full feature interaction available |
+| Visit Us  | Visable and map interaction available | Visible and map interaction available |
+
+## CRUD Functionality
+
+Users are able to Create, Read, Update and Delete their shared information on FreeFido. Some features make full CRUD functionality available, whilst others present the necessary options only. Here is my CRUD breakdown for FreeFido:
+
+| Feature | Create | Read | Update | Delete |
+|---------|--------|------|--------|--------|
+| Profile | Created upon registration | Yes | Yes | Full Profile deletion is currently only available to Admin upon User Account deletion, the profile dashboard clears automatically if a user removes all of their articles or bookings |
+| Articles | Yes | Yes | Yes | Yes |
+| Bookings | Yes | Yes | Yes | Yes |
+| Gallery | Yes | Yes | No - this feature felt unneccessary as it's intention is a 'quick-sharing' of a photo, a minimal amount of information is required and users are able to delete the image if they wish | Yes |
 
 ### User View - Registered/Unregistered
 HealMate offers distinct user views. Unregistered users can search for specialists, but registered users have full access to the appointment system and dashboard functionalities.
