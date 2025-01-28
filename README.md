@@ -67,9 +67,11 @@ Cat Lovers is accessible from all browsers and is fully responsive on different 
 
 Cat Lovrs allows you to book a cat hotel for a night or a month through a basic booking system.
 In future developments of this project, I would like to provide users with an upgraded booking system with payment options, and the opportunity to connect with other cat lovers who have compatible cats through adding friends and direct messaging.
+
 ## UX - User Experience
 
 ### Design Inspiration
+The design inspiration for Cat Lovers came from the fact that 350 cats are killed every day in Japan. Most of them are newborn cats. By adopting a very cute baby cat and showing it to many people through the internet, someone who likes it may become a foster parent. This is why I launched the Cat Lovers site.
 
 ### Colour Scheme
 In keeping with the theme of animal welfare, I chose wood colors that evoke nature.:
