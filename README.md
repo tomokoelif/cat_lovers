@@ -288,7 +288,7 @@ All code has been validated through:
 - **Automatic Assignment Testing:** Tests were conducted to verify that newly registered users are automatically assigned to the "Patient" group and that their PatientProfile was successfully created. This was confirmed through both the user interface and the Django admin panel.
 
 **Outcome**
-The problem was successfully resolved, allowing users to access their respective dashboards based on group membership without encountering 403 errors or redirection issues.
+The problem was successfully resolved. 
 
 ## Deployment
 
