@@ -12,15 +12,12 @@ For Admin access with relevant sign-in information: [CatLovers Admin](https://ca
 
 <hr>
 
-以下は修正された「Table of Contents」です。
-
-```
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Overview](#overview)
 - [UX - User Experience](#ux---user-experience)
-  - [Design Inspiration](#design-inspiration)
+    - [Design Inspiration](#design-inspiration)
     - [Colour Scheme](#colour-scheme)
     - [Font](#font)
 - [Project Planning](#project-planning)
@@ -39,7 +36,6 @@ For Admin access with relevant sign-in information: [CatLovers Admin](https://ca
 - [Features](#features)
   - [User View - Registered/Unregistered](#user-view---registeredunregistered)
   - [CRUD Functionality](#crud-functionality)
-  - [Feature Showcase](#feature-showcase)
   - [Future Features](#future-features)
 - [Technologies & Languages Used](#technologies--languages-used)
   - [Libraries & Frameworks](#libraries--frameworks)
@@ -71,6 +67,9 @@ Cat Lovers is accessible from all browsers and is fully responsive on different 
 
 Cat Lovrs allows you to book a cat hotel for a night or a month through a basic booking system.
 In future developments of this project, I would like to provide users with an upgraded booking system with payment options, and the opportunity to connect with other cat lovers who have compatible cats through adding friends and direct messaging.
+## UX - User Experience
+
+### Design Inspiration
 
 ### Colour Scheme
 In keeping with the theme of animal welfare, I chose wood colors that evoke nature.:
