@@ -113,35 +113,34 @@ I used an agile approach to project management. The Cat Lovers development proce
 - **Must-Haves:** User registration and login, Post article and photo .
 - **Should-Haves:** messaging system, comment system.
 - **Could-Haves:**  Hotel booking system, Comment delite Edit function.
-- **Won’t-Haves:** Full payment integration, All user can post photo.
-  
+- **Won’t-Haves:** Full payment integration, All user can post photo.  
   https://github.com/users/tomokoelif/projects/6
 
 ### Sprints
 - **Sprint 1:** Initial Setup - Project, repository, environment setup.
-- **Sprint 2:** User Authentication & Role-Based Dashboards.
-- **Sprint 3:** Specialist Search & Appointment Booking System.
-- **Sprint 4:** Static Pages & UI/UX Improvements.
+- **Sprint 2:** User Authentication & Log in, Log out system.
+- **Sprint 3:** Messaging & comment system.
+- **Sprint 4:** Booking system, comment edit delite functions.
 - **Sprint 5:** Deployment & Testing.
 
 ## User Stories
-- As a user (patient/specialist/admin), I want to register and log in securely so that I can access my dashboard and manage my activities.
-- As a user, I want a personalized dashboard based on my role (patient, doctor, admin) so that I can access the features relevant to me.
-- As a visitor, I want to see a well-designed home page that introduces HealMate so that I understand the platform's purpose and value.
-- As a patient, I want to search for specialists by category (e.g., Dermatologist, Psychologist) so that I can find a doctor that meets my needs.
-- As a patient, I want to view available time slots for a specialist and book an appointment, so that I can get medical advice and treatment.
-- As a patient, I want to message my doctor before or after a consultation so that I can ask follow-up questions or clarify doubts.
-- As a specialist, I want to manage my schedule and view patient appointments so that I can efficiently conduct consultations.
+- As a user (user/admin), I want to register and log in securely so that I can access my registration site and manage my activities.
+- As a user, I want to contact to Cat Lovers. So I can submit a request for collaboration
+- As a user, I want to comment to the posts. So I can writet a comment and edit and delete.
+- As a user, I want to book the cat hote, So I can book by booking site.
+- As a visitor, I want to see a well-designed home page that introduces Cat Lovers so that I understand the platform's purpose and value.
+- As a Site Admin I post the photos and change about site. So I can manage the photo and article of the site.
+- As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments
 
 ## Scope Plane
-The HealMate platform will include the following MVP functionalities:
-- User registration and role-based dashboards.
-- Search and filtering system for specialists.
-- Appointment scheduling with available specialists.
-- Specialist profiles showcasing specialty, experience, and availability.
+The Cat Lovers platform will include the following MVP functionalities:
+- User registration.
+- Post photos and articles.
+- Comment to the post. And user can edit and delete without admin site.
+- Booking site.
 
 ## Structural Plane
-The site is structured around an easy-to-use interface. The primary menu includes links to specialist searches, appointment bookings, and user profile management.
+The site is structured around an easy-to-use interface. The primary menu includes links to Post, About, hotel bookings.
 
 ## Skeleton & Surface Planes
 
