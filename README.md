@@ -275,107 +275,8 @@ All code has been validated through:
 - **Responsiveness**: The platform has been tested on mobile, tablet, and desktop devices to ensure optimal performance.
 - **Automatic Assignment Testing:** Tests were conducted to verify that newly registered users are automatically assigned to the "Patient" group and that their PatientProfile was successfully created. This was confirmed through both the user interface and the Django admin panel.
 
-
 **Outcome**
-
 The problem was successfully resolved, allowing users to access their respective dashboards based on group membership without encountering 403 errors or redirection issues.
-
-### Bug Fix #3: Form Not Visible on Homepage Due to Conflicting View Usage
-
-### Issue
-The form on the homepage not visible due to conflicting view usage. The homepage should display a form that allows users to search for specialists, but the form did not appear as expected.
-
-### Cause
-The conflict arises from the use of both a class-based `HomePage` view and a function-based `home` view. The class-based view does not properly pass the `specialties` context required to render the form on the homepage.
-
-### Steps Taken to Fix
-
-1. **Update URLs**:
-   - Updated `core/urls.py` to replace the class-based `HomePage` view with the function-based `home` view to ensure the correct context is passed.
-
-2. **Verify Context Passing**:
-   - Verified that the `specialties` context was properly passed to `index.html` so that the form could display the list of specialties dynamically.
-
-3. **Test Form Visibility and Functionality**:
-   - Tested the homepage to ensure that the form was visible and correctly populated with the list of specialties from the database.
-
-4. **Commit Changes**:
-   - Added and committed the changes after confirming that the issue was resolved.
-
-### Outcome
-The form is now visible on the homepage and correctly displays the list of specialties, allowing users to search for specialists as intended. The conflict between the views was resolved by using the appropriate function-based view that properly passes the necessary context.
-
-
-### Bug Fix #4: Signal Not Triggering on User Registration
-
-### Issue
-A Django signal intended to automatically assign new users to the "Patients" group and create a `PatientProfile` upon registration was not firing. This led to no profile being created and no group being assigned after user registration.
-
-### Cause
-The issue was caused by an incorrect configuration of the `AccountsConfig` class in `INSTALLED_APPS` in `settings.py` and missing signal imports in the `ready()` method of `accounts/apps.py`.
-
-### Steps Taken to Fix
-
-1. **Correct Configuration in INSTALLED_APPS**:
-   - Updated `INSTALLED_APPS` in `settings.py` to reference `'accounts.apps.AccountsConfig'` instead of just `'accounts'`. This ensured that the custom AppConfig class was properly loaded.
-
-2. **Add Signal Imports in `ready()` Method**:
-   - Added a `ready()` method in `accounts/apps.py` to correctly import the signal handlers, ensuring they were registered when the app was loaded.
-
-3. **Remove Debug Statements**:
-   - Removed unnecessary print statements that were used for debugging to keep the code clean and efficient.
-
-### Outcome
-The signal is now correctly triggered upon user registration, resulting in the automatic assignment of new users to the "Patients" group and the creation of a `PatientProfile` as intended. The configuration in `INSTALLED_APPS` and signal registration were successfully fixed.
-
-
-### Bug Fix #5: Specialist Availability Submission and Display Issues
-
-### Issue
-Specialists encountered multiple issues when trying to set their availability. Initially, a 405 Method Not Allowed error occurred upon form submission. After fixing that, the start time was not displayed on the specialist dashboard, while the end time appeared correctly.
-
-### Cause
-1. **405 Method Not Allowed**:
-   - The `post` method was missing from the `SpecialistDashboardView` class in `dashboard/views.py`, resulting in the 405 error when attempting to submit availability.
-
-2. **Missing Start Time**:
-   - The `start_time` was not displayed on the specialist dashboard due to a missing template tag (`{{ availability.start_time }}`) in the "Your Availability" section.
-
-### Steps Taken to Fix
-
-1. **Handle POST Method in View**:
-   - Added a `post` method to `SpecialistDashboardView` in `dashboard/views.py` to properly handle form submissions, resolving the 405 Method Not Allowed error.
-
-2. **Fix Start Time Rendering in Template**:
-   - Updated the specialist dashboard template to include the `{{ availability.start_time }}` tag, ensuring that both the `start_time` and `end_time` are displayed in the "Your Availability" section.
-
-### Outcome
-Specialists can now successfully submit their availability without encountering the 405 error. Both `start_time` and `end_time` are displayed correctly on the specialist dashboard, providing a complete view of their available times for appointments.
-
-
-### Bug Fix #6: Incorrect Template Rendered for Specialist Search Results
-
-### Issue
-The incorrect template was being rendered for specialist search results on the HealMate platform. A secondary `search_results.html` template in a different directory was causing confusion, leading to a simplified search results page being displayed. Key features like specialist bio, profile image, and pagination were missing.
-
-### Cause
-An additional `search_results.html` template was located inside the global `/templates/specialists/` directory. This template had minimal content and was unintentionally overriding the correct `search_results.html` template in the `/specialists/templates/specialists/` directory.
-
-### Steps Taken to Fix
-
-1. **Isolate Problematic Template**:
-   - Renamed the global `/templates/specialists/` directory to determine if it was the source of the issue.
-
-2. **Confirm and Resolve Issue**:
-   - After confirming the issue was caused by the additional template, deleted the `/templates/specialists/` directory and its contents.
-
-3. **Verify Correct Template Rendering**:
-   - Verified that the correct `search_results.html` template inside `/specialists/templates/specialists/` is now rendering, displaying all necessary features, including the specialist bio, profile image, and pagination.
-
-### Outcome
-The correct template for specialist search results is now rendering as intended. The page displays all relevant information, including specialist bio, profile images, and pagination, providing users with a complete view of search results.
-
-
 
 ## Deployment
 
@@ -410,45 +311,20 @@ The steps for deploying to Heroku are as follows (Experience from previous Djang
 
 The live link for this project can be found here: <a href="https://healmate-378e458234ec.herokuapp.com/" target="_blank">HealMate</a>
 
-### Fork this Repository
-
-1. Go to the GitHub repository.
-2. Click the "Fork" button in the upper right-hand corner.
-
-### Clone this Repository
-
-1. Go to the GitHub repository.
-2. Click the "Code" button at the top of the page.
-3. Choose between 'HTTPS', 'SSH', or 'GitHub CLI' depending on your preference.
-4. Click the copy button to copy the URL.
-5. Open Git Bash.
-6. Change the working directory to where you want to clone the directory.
-7. Type:
-    ```bash
-    git clone https://github.com/easybulb/healmate
-    ```
-8. Press Enter to create the local clone.
-
-**Note:** The difference between a clone and a fork is that with a clone, you need permission to push changes to the original repository, whereas a fork creates an entirely new project under your GitHub account.
-
 ## Privacy Policy
 
-As part of my **HealMate** project, I am dedicated to ensuring that users’ personal data is handled responsibly. The following privacy practices outline how information is collected, used, and stored within this academic project.
+As part of my **Cat Lovers** project, I am dedicated to ensuring that users’ personal data is handled responsibly. The following privacy practices outline how information is collected, used, and stored within this academic project.
 
-- **Data Collection**: HealMate, as a project, collects personal data during user registration and profile setup. This includes:
+- **Data Collection**: Cat Lovers, as a project, collects personal data during user registration and profile setup. This includes:
   - First and Last Name
-  - Contact Information (Phone Number, Email)
-  - Date of Birth
-  - Gender
-  - Medical History
-  - Emergency Contact Information
+  - Contact Information (Email)
+  - Cat information
 
 - **Data Usage**: The information gathered is used solely for educational purposes, including:
   - Managing user profiles.
-  - Facilitating appointment bookings between patients and specialists.
-  - Sending notifications related to appointments or system updates.
+  - Facilitating appointment bookings for cat hotel.
 
-- **Data Sharing**: As this is a student project, personal data will not be shared with any third parties. It will only be used for demonstrating the functionality of the project. All information remains confidential and will not be distributed beyond the scope of the HealMate project.
+- **Data Sharing**: As this is a student project, personal data will not be shared with any third parties. It will only be used for demonstrating the functionality of the project. All information remains confidential and will not be distributed beyond the scope of the Cat Lovers project.
 
 - **Security**: While this project is intended for educational use, I strive to implement best practices for data security using the Django framework’s built-in tools. Personal information is securely stored in the database and protected against unauthorized access.
 
@@ -465,24 +341,21 @@ Since this is an educational project, the privacy and data handling policies may
 - **Chatgpt AI**: For images and some coding ideas
 - **Favicon.io**: For Favicon generation.
 - **Google Fonts**: For typography.
+- **Dillon Mc Caffrey** - Code Institute: For General guidance.
 - **Mark Brisco** - Code Institute: For general guidance.
-- **Amy Richardson** - Code Institute: General guidance.
-
+- **Ruairidh MacArthur** - Code Institute: For general guidance.
 ### Media
 - Icons and images sourced from **Canva** and **ChatGPT**.
 - ERD illustration was generated from **pygraphiz** - A django extension.
-
-### Additional reading/tutorials/books/blogs
-- **Django for Beginners** by William S. Vincent.
 
 ## Acknowledgements
 
 I would like to extend my heartfelt gratitude to the following individuals and organizations whose support, guidance, and inspiration have been invaluable in the development of this project.
 
 ### Mentors and Advisors
-- **Amy Richardson** – Sincere gratitude to Amy, our tutor and facilitator, whose unwavering guidance and expertise were pivotal throughout this journey. Her mentorship provided the clarity and support needed to navigate challenges, ultimately elevating the quality of this project. Her dedication and encouragement made a profound impact on my progress and learning.
+- **Dillon Mc Caffery** – A heartfelt thank you to Amy, our tutor and facilitator. His unwavering guidance and expertise were crucial throughout this journey. His guidance provided the clarity and support I needed to get through challenges and ultimately enhanced the quality of this project. His dedication and encouragement had a profound impact on my progress and learning.
 
-- **Mark Briscoe** – A heartfelt thank you to Mark, our dedicated tutor, whose unwavering support, insightful feedback, and constructive criticism were instrumental in guiding this project to completion. His depth of knowledge and encouragement not only enhanced my understanding but also inspired me to consistently improve my work. This project would not have been the same without his invaluable mentorship.
+- **Ruairidh MacArthur** – A heartfelt thank you to Mark, our dedicated tutor. His unwavering support, insightful feedback and constructive criticism played a key role in helping me complete this project. His deep knowledge and encouragement not only deepened my understanding but also inspired me to constantly improve my work. This project would not have been the same without his invaluable guidance.
 
 
 ### Supportive Friends and Family
