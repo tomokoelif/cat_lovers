@@ -276,6 +276,7 @@ All code has been validated through:
 - **HTML**: [W3C Markup Validator](https://validator.w3.org/).
 - **CSS**: [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
 - **Python**: PEP8 validation to ensure code quality.
+- test result https://github.com/tomokoelif/cat_lovers/tree/main/templates/tests
 
 ![HTML validator test](https://github.com/tomokoelif/cat_lovers/blob/main/html.png)
 
