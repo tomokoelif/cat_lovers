@@ -267,7 +267,7 @@ All code has been validated through:
 
 ![HTML validator test](https://github.com/tomokoelif/cat_lovers/blob/main/html.png)
 
-![CSS validator test](https://github.com/tomokoelif/cat_lovers/blob/main/html.png)
+![CSS validator test](https://github.com/tomokoelif/cat_lovers/blob/main/css.png)
 
 ### **User Testing**
 
