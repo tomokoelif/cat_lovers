@@ -170,15 +170,12 @@ Wireframes were created for the following key pages to ensure an intuitive user 
 
 ![Homepage Wireframe](https://github.com/tomokoelif/cat_lovers/blob/main/Cat%20Lovers%20mobile%20Form.png)
 
-- **User Dashboards** (Patient and Specialist)
-- **Admin Panel**
-
 Wireframes were designed using [Balsamiq](https://balsamiq.com/), ensuring responsiveness across devices.
 
 ## Database Schema - Entity Relationship Diagram
-The ERD for HealMate illustrates the relationships between the users, specialists, appointments, and more. This is essential to demonstrate the relationships between the different models in the PostgreSQL database.
+Cat Lovers' ERD shows relationships between users, admins, reservations, etc. This is essential to show the relationships between the various models in the PostgreSQL database.
 
-The ERD also demonstrates the platform's role-based structure. Each user is assigned to a specific group (patient, specialist, or admin) that determines their access level. PatientProfile and SpecialistProfile models are linked to the User model, and each profile type has specific fields relevant to their role. Admins have broader access to manage both specialist vetting and platform data.
+The ERD also shows the role-based structure of the platform. Each user is assigned to a specific group (unregistered, registered admins) that determines their level of access. Unregistered and registered users models are linked to the user model, and each profile type has specific fields related to its role. Administrators have broader access to manage both registered users and platform data.
 
 ![ERD Illustration](docs/erd/erd-healmate.png)
 
