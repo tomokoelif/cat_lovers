@@ -198,7 +198,7 @@ It was important to me from the beginning that Cat Lovers be accessible to non-r
 |-----------|-------------------|-----------------|
 | Home Page | Visable           | Visable         |
 | Articles  | Visable but not interactable via 'Likes/Comments', 'Add Article' button not visible | Visable and full feature interaction available |
-| Messaging | writing           | writing         |
+| Messaging | Writeable         | Writeable       |
 | Booking   | Icon visible but redirected to Sign In page/Sign Up through link | Visable and full feature interaction available |
 
 ### User Registration Process
